@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#70000000"
+    android:padding="32dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/popup_background"
+        android:padding="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/popup_title_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/close_popup_button"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/close_popup_button"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="end"
+                app:layout_constraintStart_toEndOf="@id/popup_title_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/popup_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#7B7B7B"
+                android:text="Loading description..."
+                android:textSize="16sp" />
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>
